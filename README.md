@@ -28,7 +28,7 @@ Through the connected tools, an AI agent can:
 - Retrieve scan statistics, leads, and folder-level analytics
 - and much more...
 
-See [Available MCP tools](#available-mcp-tools) below for the current tool overview.
+See [Tools](#tools) below for the current tool overview.
 
 ## Quick start
 
@@ -61,6 +61,22 @@ See [Available MCP tools](#available-mcp-tools) below for the current tool overv
    ```
 
 Exact commands and flags can change as MCP clients update their support. If something in these docs looks stale, verify against your client's own documentation and the official QR Planet MCP page: [qrplanet.com/qr-code-mcp](https://qrplanet.com/qr-code-mcp).
+
+## Config
+
+```json
+{
+  "mcpServers": {
+    "qrplanet-mcp": {
+      "type": "http",
+      "url": "https://api.qrplanet.com/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_QR_PLANET_API_KEY"
+      }
+    }
+  }
+}
+```
 
 ## Setup guides
 
@@ -97,7 +113,7 @@ Ready-to-use prompts for common tasks live in `prompts/`:
 - [Issue a coupon voucher](prompts/issue-coupon-voucher.md)
 - [Update App Store QR Code targets](prompts/update-app-store-qr-code.md)
 
-## Available MCP tools
+## Tools
 
 The QR Planet MCP Server currently exposes the following tools. Tool availability may depend on your QR Planet API key permissions. This also may change over time. The single source of truth is of course the live MCP `tools/list` response from your client is authoritative. 
 
